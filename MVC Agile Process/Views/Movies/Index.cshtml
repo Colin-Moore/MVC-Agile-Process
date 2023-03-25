@@ -1,4 +1,4 @@
-﻿@model MvcMovie.Models.MovieGenreViewModel
+﻿@model MVC_Agile_Process.Models.MovieGenreViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -20,7 +20,6 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
-
 <table class="table">
     <thead>
     <tr>
@@ -35,6 +34,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Movies[0].Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Movies[0].Rating)
         </th>
         <th></th>
     </tr>
@@ -54,6 +56,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
